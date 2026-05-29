@@ -4,7 +4,7 @@
 	"version": "0.0.3",
 	"type": "module",
 	"scripts": {
-		"clean": "rm -rf dist",
+		"clean": "npx rimraf dist",
 		"predev": "node scripts/build-locales.js",
 		"dev": "vite",
 		"prebuild": "node scripts/build-locales.js",
@@ -16,7 +16,6 @@
 		"version:major": "npm version major"
 	},
 	"dependencies": {
-		"@crxjs/vite-plugin": "^2.3.0",
 		"@tailwindcss/vite": "^4.1.18",
 		"@urnetwork/elements": "^0.0.1-beta.6",
 		"@urnetwork/localizations": "^0.0.6",
@@ -29,6 +28,7 @@
 	},
 	"devDependencies": {
 		"@eslint/js": "^9.39.1",
+		"@samrum/vite-plugin-web-extension": "^5.1.1",
 		"@types/chrome": "^0.1.36",
 		"@types/node": "^24.10.1",
 		"@types/react": "^19.2.5",
@@ -38,6 +38,7 @@
 		"eslint-plugin-react-hooks": "^7.0.1",
 		"eslint-plugin-react-refresh": "^0.4.24",
 		"globals": "^16.5.0",
+		"rimraf": "^6.1.3",
 		"typescript": "~5.9.3",
 		"typescript-eslint": "^8.46.4",
 		"vite": "^7.2.4",

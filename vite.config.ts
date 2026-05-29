@@ -1,9 +1,9 @@
 import path from "node:path";
-import { crx } from "@crxjs/vite-plugin";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import zip from "vite-plugin-zip-pack";
-import manifest from "./manifest.config.js";
+import webExtension from "@samrum/vite-plugin-web-extension";
+import manifest from "./manifest.config";
 import { name, version } from "./package.json";
 import tailwindcss from "@tailwindcss/vite";
 import { viteStaticCopy } from "vite-plugin-static-copy";
@@ -15,8 +15,9 @@ export default defineConfig({
 		},
 	},
 	plugins: [
-		react(),
-		crx({ manifest }),
+                webExtension({ manifest } as any) as any,
+                react(),
+
 		viteStaticCopy({
 			targets: [
 				{

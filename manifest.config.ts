@@ -1,17 +1,17 @@
-import { defineManifest } from "@crxjs/vite-plugin";
+
 import pkg from "./package.json";
 
-export default defineManifest({
+export default {
 	manifest_version: 3,
 	name: "URnetwork",
 	version: pkg.version,
 	default_locale: "en",
 	icons: {
-		48: "public/logo.png",
+		48: "logo.png",
 	},
 	action: {
 		default_icon: {
-			48: "public/logo.png",
+			48: "logo.png",
 		},
 		default_popup: "src/popup/index.html",
 	},
@@ -40,4 +40,4 @@ export default defineManifest({
 	// side_panel: {
 	//   default_path: "src/sidepanel/index.html",
 	// },
-});
+};
