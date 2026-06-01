@@ -1,7 +1,6 @@
-
 import pkg from "./package.json";
 
-export default {
+const manifest: chrome.runtime.ManifestV3 = {
 	manifest_version: 3,
 	name: "URnetwork",
 	version: pkg.version,
@@ -41,3 +40,5 @@ export default {
 	//   default_path: "src/sidepanel/index.html",
 	// },
 };
+
+export default manifest;
